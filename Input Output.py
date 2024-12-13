@@ -1,6 +1,6 @@
-select_Line = int(input("What line do you want to read: "))
+select_Line = int(input("What line do you want to read: "))   #This stores the integer value of the line that will be read from the text file in the variable select_line.
 
-with open("Input Output.txt", "r") as file:
+with open("Input Output.txt", "r") as file:   
     lines = file.readlines() 
 
 true_Line = lines[select_Line - 1].strip()
