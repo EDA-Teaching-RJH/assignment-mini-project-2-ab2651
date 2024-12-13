@@ -9,5 +9,5 @@ print(true_Line)
 new_Line = input("What do you want to add to the file: ")
 
 with open("Input Output.txt", "a") as file:
-    file.write(new_Line) 
+    file.write("\n" + new_Line) 
     print(new_Line, "has been added to the file.")
