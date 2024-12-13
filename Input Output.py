@@ -1,13 +1,18 @@
-select_Line = int(input("What line do you want to read: "))   #This stores the integer value of the line that will be read from the text file in the variable select_line.
+import re
+
+select_Email = int(input("What line do you want to read: "))   
 
 with open("Input Output.txt", "r") as file:   
     lines = file.readlines() 
 
-true_Line = lines[select_Line - 1].strip()
+true_Line = lines[select_Email - 1].strip()
 print(true_Line)
 
-new_Line = input("What do you want to add to the file: ")
-
-with open("Input Output.txt", "a") as file:
-    file.write("\n" + new_Line) 
-    print(new_Line, "has been added to the file.")
+new_Email = input("What email do you want to add to the file: ")
+email = new_Email.strip()
+if re.search(".+@.+", email):
+    with open("Input Output.txt", "a") as file:
+        file.write("\n" + new_Email) 
+        print(new_Email, "has been added to the file.")
+else:
+    print("An invalid email was entered.")
