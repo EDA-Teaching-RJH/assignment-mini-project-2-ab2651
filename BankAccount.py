@@ -8,7 +8,6 @@ class BankAccount:
     
     def deposit_money(self, amount):
         if amount <= 0:
-            print("Amount must be greater than 0.")
             raise ValueError
     
     def withdraw_money(self, amount):
