@@ -7,4 +7,8 @@ def test_diameter():
 
 def test_circumference():
     radius = Circle(2.6)
-    assert radius.circumference() == 16.3362818
+    assert radius.circumference() == 16.336281798666924
+
+def test_area():
+    radius = Circle(10)
+    assert radius.area() == 314.1592653589793
